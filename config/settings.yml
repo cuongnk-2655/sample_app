@@ -1,0 +1,6 @@
+email:
+  max_length: 80
+  min_length: 20
+name:
+  max_length: 40
+  min_length: 6

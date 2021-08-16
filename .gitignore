@@ -46,4 +46,7 @@ config/credentials.yml.enc
 config/database.yml
 .framgia-ci-reports/
 .framgia-ci-result.temp.yml
-/spec
+/spec/
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
