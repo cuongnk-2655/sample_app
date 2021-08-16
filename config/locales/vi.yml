@@ -1,9 +1,16 @@
 vi:
+  activerecord:
+    models:
+      user: "Nguoi dung"
+    attributes:
+      user:
+        name: "Ten"
+        email: "Email"
+        password: "Mat khau"
   hello: "Hello world"
-  hello: "Hello world"
-  app_name: "Sample app"
+  app_name: "App THu"
   title: "Ruby on Rails Tutorial Sample App"
-  home: "Home"
+  home: "Trang chu"
   help: "Help"
   welcome: "Welcome to the Sample App"
   sign_up: "Sign up"
@@ -20,3 +27,4 @@ vi:
       <em>Ruby on Rails Tutorial</em>
       book
     </a>."
+  confirmation: "Password Confirmation"

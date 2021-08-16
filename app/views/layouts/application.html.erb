@@ -12,6 +12,10 @@
 
   <body>
     <%= render "layouts/header" %>
-    <%= yield %>
+
+    <div class="container">
+      <%= render "commons/flash_message" %>
+      <%= yield %>
+    </div>
   </body>
 </html>
