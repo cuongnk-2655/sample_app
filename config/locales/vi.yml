@@ -1,4 +1,5 @@
-en:
+vi:
+  hello: "Hello world"
   hello: "Hello world"
   app_name: "Sample app"
   title: "Ruby on Rails Tutorial Sample App"
