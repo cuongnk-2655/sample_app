@@ -15,6 +15,7 @@ en:
   welcome: "Welcome to the Sample App"
   sign_up: "Sign up"
   sign_in: "Sign in"
+  sign_out: "Sign out"
   text_home_page_html: "This is the home page for the
     <a href='http://www.railstutorial.org/'>
     Ruby on Rails Tutorial</a>
@@ -30,4 +31,17 @@ en:
   the_form_contains: "The form contains "
   number_error: "%{count} error"
   not_found: "Not found value"
-
+  is_new_user: "You are new user ?"
+  invalid_email_password_combination: "Invalid email or password"
+  header:
+    home: "Home"
+    help: "Help"
+    language: "Language"
+    vi: "Vietnamese"
+    en: "English"
+    manage_user: "List User"
+    account: "Account"
+    profile: "Profile"
+    edit: "Edit User"
+    logout: "Log out"
+  create_my_account: "Create My Account"
