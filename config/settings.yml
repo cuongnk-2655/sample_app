@@ -1,6 +1,10 @@
 email:
   max_length: 80
   min_length: 20
+  host: "localhost:3000"
+  address: "smtp.mailtrap.io"
+  username: "44fbe27c385276"
+  password: "23fa0c218236ec"
 name:
   max_length: 40
   min_length: 6
