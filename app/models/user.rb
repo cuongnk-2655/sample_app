@@ -8,6 +8,7 @@ class User < ApplicationRecord
     length: {maximum: Settings.email.max_length, minimum: Settings.email.min_length}
   validates :name, presence: true,
     length: {maximum: Settings.name.max_length, minimum: Settings.name.min_length}
+  validates :password, length: {minimum: Settings.name.min_length}, allow_nil: false
 
   before_save{email.downcase!}
   before_create :create_activation_digest

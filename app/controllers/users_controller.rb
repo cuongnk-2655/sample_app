@@ -24,6 +24,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
+
+  def update
+    @user = User.find_by id: params[:id]
+    if @user.update user_params
+      flash[:success] = t :update_success
+      redirect_to @user
+    else
+      render :new
+    end
+  end
+
   def create
     @user = User.new user_params
     if @user.save
