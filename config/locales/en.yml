@@ -1,4 +1,12 @@
 en:
+  activerecord:
+    models:
+      user: "Nguoi dung"
+    attributes:
+      user:
+        name: "Ten"
+        email: "Email"
+        password: "Mat khau"
   hello: "Hello world"
   app_name: "Sample app"
   title: "Ruby on Rails Tutorial Sample App"
@@ -19,3 +27,7 @@ en:
       <em>Ruby on Rails Tutorial</em>
       book
     </a>."
+  the_form_contains: "The form contains "
+  number_error: "%{count} error"
+  not_found: "Not found value"
+
