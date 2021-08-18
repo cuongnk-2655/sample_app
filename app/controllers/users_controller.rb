@@ -10,10 +10,10 @@ class UsersController < ApplicationController
     flash[:danger] = t :not_found
     redirect_to new_user_path
   end
-
   def create
     @user = User.new user_params
     if @user.save
+      log_in @user
       flash[:success] = t :welcome
       redirect_to @user
     else
