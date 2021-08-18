@@ -57,3 +57,10 @@ en:
       previous: "‹ PREV"
       next: "NEXT ›"
       truncate: "…"
+  message_activate: "Please check your email to activate your account."
+  activated: "Account activated!"
+  invalid_link: "Invalid activation link"
+  account_not_activate: "Account not activated. Check your email for the activation link."
+  user_mailer:
+    account_activation:
+      subject: "Account Activation"
