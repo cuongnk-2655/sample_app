@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by id: params[:id]
-    if @user.update user_params
+    if @user.update! user_params
       flash[:success] = t :update_success
       redirect_to @user
     else
