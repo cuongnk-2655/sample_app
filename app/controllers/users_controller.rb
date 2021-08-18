@@ -1,14 +1,27 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: %i(index show edit update destroy)
+  before_action :load_user, only: %i(show edit update)
+  before_action :correct_user, only: %i(edit update)
+
+  def index
+    @users = User.page(params[:page]).per(Settings.per_page).sort_by_new
+  end
+
   def new
     @user = User.new
   end
 
-  def show
-    @user = User.find_by id: params[:id]
-    return if @user
+  def show; end
 
-    flash[:danger] = t :not_found
-    redirect_to new_user_path
+  def edit; end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t :update_success
+      redirect_to @user
+    else
+      render :edit
+    end
   end
 
   def create
@@ -22,8 +35,37 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    if @user.destroy
+      flash[:success] = t :success_update
+    else
+      flash[:danger] = t :error_update
+    end
+    redirect_to users_url
+  end
+
   private
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
+  end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    return if @user
+
+    flash[:danger] = t :not_found
+    redirect_to new_user_path
+  end
+
+  def logged_in_user
+    return if logged_in?
+
+    store_location
+    flash[:danger] = t :sign_in
+    redirect_to login_path
+  end
+
+  def correct_user
+    redirect_to(login_path) unless current_user?(@user)
   end
 end

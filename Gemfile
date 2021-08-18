@@ -5,9 +5,11 @@ ruby "2.7.0"
 
 gem "bcrypt", "3.1.11"
 gem "bootsnap", ">= 1.4.4", require: false
+gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "3.4.1"
 gem "config"
 gem "jbuilder", "~> 2.7"
+gem "kaminari"
 gem "puma", "~> 5.0"
 gem "rails", "~> 6.1.4"
 gem "rails-i18n"
