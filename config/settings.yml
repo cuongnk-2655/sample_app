@@ -4,3 +4,4 @@ email:
 name:
   max_length: 40
   min_length: 6
+remember: "1"

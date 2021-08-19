@@ -5,6 +5,7 @@ class AuthsController < ApplicationController
     user = User.find_by email: params[:auth][:email].downcase
     if user&.authenticate params[:auth][:password]
       log_in user
+      params[:auth][:remember_me] == Settings.remember ? remember(user) : forget(user)
       redirect_to user
     else
       flash.now[:danger] = t :invalid_email_password_combination
