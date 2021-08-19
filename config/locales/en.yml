@@ -64,3 +64,4 @@ en:
   user_mailer:
     account_activation:
       subject: "Account Activation"
+  send_mail_reset_pass: "Email sent with password reset instructions"
