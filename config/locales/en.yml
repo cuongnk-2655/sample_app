@@ -46,3 +46,14 @@ en:
     logout: "Log out"
   create_my_account: "Create My Account"
   remember: "Remember me on this computer"
+  edit_profile: "Update your profile"
+  save_change: "Save changes"
+  change: "Change"
+  update_success: "Profile updated"
+  views:
+    pagination:
+      first: "« FIRST"
+      last: "LAST »"
+      previous: "‹ PREV"
+      next: "NEXT ›"
+      truncate: "…"

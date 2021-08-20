@@ -1,0 +1,9 @@
+<% provide :title, t("list_user") %>
+
+<h1><%= t :list_user %></h1>
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= paginate @users, theme: "twitter-bootstrap-3" %>

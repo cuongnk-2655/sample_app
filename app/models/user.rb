@@ -9,6 +9,8 @@ class User < ApplicationRecord
   validates :name, presence: true,
     length: {maximum: Settings.name.max_length, minimum: Settings.name.min_length}
 
+  scope :sort_by_new, ->{order created_at: :desc}
+
   has_secure_password
 
   class << self
