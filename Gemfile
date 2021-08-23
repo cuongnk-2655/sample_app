@@ -8,6 +8,7 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "3.4.1"
 gem "config"
+gem "dotenv-rails", groups: [:development, :test]
 gem "jbuilder", "~> 2.7"
 gem "kaminari"
 gem "puma", "~> 5.0"
